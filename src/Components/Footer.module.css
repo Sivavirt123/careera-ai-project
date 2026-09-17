@@ -1,0 +1,38 @@
+.footer {
+  padding: 60px 5%;
+  background: #050817;
+  color: white;
+  text-align: center;
+}
+
+.footer h2 {
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #8b7cff;
+}
+
+.footer p {
+  color: #858eaf;
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.footer a {
+  color: #aeb5ce;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #8b7cff;
+}
+
+.footer small {
+  color: #5e6789;
+}

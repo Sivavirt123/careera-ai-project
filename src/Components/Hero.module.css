@@ -1,0 +1,182 @@
+.hero {
+  margin-top: 125px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(124, 92, 255, 0.25),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 200, 255, 0.15),
+      transparent 30%
+    ),
+    #080c1e;
+
+  color: white;
+  padding: 120px 5% 80px;
+}
+
+.content {
+  max-width: 750px;
+  text-align: center;
+  z-index: 2;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 50px;
+
+  background: rgba(124, 92, 255, 0.12);
+  border: 1px solid rgba(124, 92, 255, 0.4);
+
+  color: #b9adff;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.content h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin: 25px 0;
+  font-weight: 900;
+}
+
+.content h1 span {
+  background: linear-gradient(90deg, #8b7cff, #00d4ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.content p {
+  color: #aeb4cf;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: auto;
+}
+
+.buttons {
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #7657ff, #00bcd4);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(92, 80, 255, 0.3);
+}
+
+.buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(92, 80, 255, 0.5);
+}
+
+.buttons a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.buttons a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.orb {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: radial-gradient(circle, #8171ff, #111633 60%);
+  box-shadow: 0 0 100px rgba(117, 91, 255, 0.5);
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.orb div {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .orb {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 150px;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button,
+  .buttons a {
+    width: 100%;
+  }
+}

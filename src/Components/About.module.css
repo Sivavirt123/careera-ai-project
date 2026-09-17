@@ -1,0 +1,59 @@
+.section {
+  padding: 120px 5%;
+  background: #0c1128;
+  color: white;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.content > span {
+  color: #8b7cff;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.content h2 {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.content strong {
+  background: linear-gradient(90deg, #8b7cff, #00d4ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.content > p {
+  max-width: 700px;
+  margin: auto;
+  color: #a5adca;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.stats {
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.stats h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stats p {
+  color: #8992b5;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    gap: 30px;
+  }
+}

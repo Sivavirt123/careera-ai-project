@@ -1,0 +1,70 @@
+.section {
+  padding: 110px 5%;
+  background: #080c1e;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.heading span {
+  color: #8b7cff;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.heading h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  padding: 40px 30px;
+
+  border-radius: 25px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(139, 124, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: #9da5c5;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
